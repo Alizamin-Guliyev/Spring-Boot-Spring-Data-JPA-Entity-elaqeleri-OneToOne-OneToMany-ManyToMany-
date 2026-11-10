@@ -1,0 +1,19 @@
+  services:
+    postgres:
+      image: postgres:16
+      container_name: school-postgres-new
+      restart: unless-stopped
+
+      environment:
+        POSTGRES_DB: school_api
+        POSTGRES_USER: admin
+        POSTGRES_PASSWORD: admin123
+
+      ports:
+        - "5433:5432"
+
+      volumes:
+        - school-data:/var/lib/postgresql/data
+
+  volumes:
+    school-data:

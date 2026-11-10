@@ -1,0 +1,23 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /JPA_Entity
+
+spring:
+  application:
+    name: school-api
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/school_api
+    username: admin
+    password: admin123
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
